@@ -34,10 +34,18 @@ test('registration test',async ({page})=>{
     
     
     const successMessage=page.getByText('Your Account Has Been Created!')
-   await expect(successMessage).toHaveText('Your Account Has not Been Created!')
+   await expect(successMessage).toHaveText('Your Account Has Been Created!')
 
 
+})
 
+test("login test",async({page})=>{
 
+    await page.goto("/")
+    let registrationLink=page.getByText("Login or register")
+    await registrationLink.click()
+    await page.locator("#loginFrm_loginname").fill("Brook.Davis")
+    await page.locator("#loginFrm_password").fill("Brook@Davis")
+    await page.getByRole("button",{name:"Login"}).click()
 
 })
