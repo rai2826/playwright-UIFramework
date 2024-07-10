@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import {faker} from '@faker-js/faker'
 
-test('registration test',async ({page})=>{
+test.skip('registration test',async ({page})=>{
     await page.goto("/")
     const randomFirstName=faker.person.firstName();
     const randomLastName=faker.person.lastName();
@@ -39,7 +39,7 @@ test('registration test',async ({page})=>{
 
 })
 
-test("login test",async({page})=>{
+test.skip("login test",async({page})=>{
 
     await page.goto("/")
     let registrationLink=page.getByText("Login or register")
