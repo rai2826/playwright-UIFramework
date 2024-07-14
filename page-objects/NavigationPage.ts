@@ -19,6 +19,7 @@ export class NavigationPage{
     }
 
     visitNavigationPage=async()=>{
+        await this.checkoutLink.waitFor()
         await this.checkoutLink.click()
     }
 }
