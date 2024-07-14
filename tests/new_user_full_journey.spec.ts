@@ -15,4 +15,5 @@ test.only("New user full end to end journey",async({page})=>{
     await navigationPage.validateCheckoutCounter("3")
     
     await page.pause()
+    //updating the comments
 })
