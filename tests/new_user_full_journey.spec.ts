@@ -20,5 +20,4 @@ test.only("New user full end to end journey",async({page})=>{
     //comment testing the github branch rules
 
     
-    //updating the comments in new branch 
 })
