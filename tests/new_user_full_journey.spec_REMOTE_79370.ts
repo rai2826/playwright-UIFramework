@@ -17,7 +17,6 @@ test.only("New user full end to end journey",async({page})=>{
     await navigationPage.visitNavigationPage()
     await navigationPage.validateCheckoutCounter("3")
     await checkoutPage.removeCheapestItem()
-    //comment testing the github branch rules
-
+    
     
 })
