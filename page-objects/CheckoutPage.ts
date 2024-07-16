@@ -5,6 +5,7 @@ export class CheckoutPage{
     readonly basketCard: Locator
     readonly basketItemPrice: Locator
     readonly removeBasketButton: Locator
+    readonly continuetocheckoutButton: Locator
 
     constructor(page: Page){
 
@@ -12,6 +13,7 @@ export class CheckoutPage{
         this.basketCard=page.locator('[data-qa="basket-card"]')
         this.basketItemPrice=page.locator('[data-qa="basket-item-price"]')
         this.removeBasketButton=page.getByRole('button',{name:"Remove from basket"})
+        this.continuetocheckoutButton=page.getByRole('button',{name:"Continue to Checkout"})
 
     }
 
@@ -36,11 +38,14 @@ export class CheckoutPage{
         await this.removeBasketButton.nth(smallestproceIndex).click()
         await expect(this.basketCard).toHaveCount(itemsBeforeRemoval-1)
 
-        //console.warn(allpricesText)
-       // console.warn({justNumbers})
+     
 
-       
+    }
 
+    continueToCheckout= async()=>{
 
+        await this.continuetocheckoutButton.waitFor()
+        await this.continuetocheckoutButton.click()
+        await this.page.waitForURL(/\/login/)
     }
 }
