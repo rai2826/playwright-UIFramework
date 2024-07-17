@@ -11,7 +11,7 @@ import { deliveryDetails as useraddress } from '../data/deliveryDetails'
 import { PaymentPage } from '../page-objects/PaymentPage'
 import { creditCarddetails } from '../data/creditCarddetails'
 
-test.only("New user full end to end journey",async({page})=>{
+test("New user full end to end journey",async({page})=>{
    
     //Create an instance of productsPage  to call the constructor and and pass the page
     const productsPage=new ProductPage(page)

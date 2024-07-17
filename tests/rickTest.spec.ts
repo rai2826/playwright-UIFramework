@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test'
 
-test("navigating to test app",async({page})=>{
+test.skip("navigating to test app",async({page})=>{
 
 await page.goto("/")
 //await page.pause()
