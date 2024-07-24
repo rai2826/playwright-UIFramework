@@ -2,7 +2,7 @@ import{test} from '@playwright/test'
 import {v4 as uuidv4} from 'uuid'
 import { deliveryDetails as useraddress } from '../data/deliveryDetails'
 import { creditCarddetails } from '../data/creditCarddetails'
-import { PageManager } from '../page-objects/pageManager'
+import { PageManager } from '../page-objects/pageManager.ts'
 
 test("New user full end to end journey",async({page})=>{
    
