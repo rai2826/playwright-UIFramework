@@ -1,5 +1,5 @@
 import{test as Base} from '@playwright/test'
-import { PageManager } from '../page-objects/PageManager'
+import { PageManager } from './PageManager'
 
 type PManager= {
 
