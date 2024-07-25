@@ -3,6 +3,8 @@ import {v4 as uuidv4} from 'uuid'
 import { deliveryDetails as useraddress } from '../data/deliveryDetails'
 import { creditCarddetails } from '../data/creditCarddetails'
 
+//updated name of remote repo
+
 
 test("New user full end to end journey",async({page,pagemanager})=>{
 
