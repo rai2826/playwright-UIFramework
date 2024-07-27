@@ -6,7 +6,7 @@ import { creditCarddetails } from '../data/creditCarddetails'
 //updated name of remote repo
 
 
-test("New user full end to end journey",async({page,pagemanager})=>{
+test("New user full end to end journey@smoke",async({page,pagemanager})=>{
 
 
     await pagemanager.productsPage().visit()

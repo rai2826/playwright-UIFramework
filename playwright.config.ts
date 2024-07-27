@@ -30,6 +30,8 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
+  //use grep to run a specific test in the test folder based on tag , i.e. @smoke @sanity
+  grep:[new RegExp("@smoke")],
 
   /* Configure projects for major browsers */
   projects: [
