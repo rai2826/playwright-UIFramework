@@ -4,7 +4,7 @@ import { deliveryDetails as useraddress } from '../data/deliveryDetails'
 import { creditCarddetails } from '../data/creditCarddetails'
 import { PageManager } from '../Base/PageManager'
 
-test("New user full end to end journey",async({page})=>{
+test("New user full end to end journey@smoke",async({page})=>{
    
     //Create an instance of productsPageManager  to call the constructor and and pass the page
     const pm=new PageManager(page)

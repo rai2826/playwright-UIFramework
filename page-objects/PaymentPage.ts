@@ -76,7 +76,7 @@ export class PaymentPage{
         await this.ccCVC.fill(creditcarddetails.ccCVV)
         await this.payButton.waitFor()
         await this.payButton.click()
-        await this.page.waitForURL("/thank-you")
+        await this.page.waitForURL(`${process.env.URL}thank-you`)
 
     }
 
