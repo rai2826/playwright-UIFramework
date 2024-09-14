@@ -21,7 +21,8 @@ export class ProductPage{
 
     visit=async()=>{
         
-        await this.page.goto(`${process.env.URL}`)
+        //await this.page.goto(`${process.env.URL}`) // Can use this to below
+        await this.page.goto(process.env.URL??"default",{waitUntil:"commit"})
     }
 
     addProductsToBasket=async (index: number)=>{
